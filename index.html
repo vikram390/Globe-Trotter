@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlobeTrotter - Elevated Prism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-main: #f8fafc; /* Slate 50 */
+        --primary-indigo: #4f46e5;
+        --accent-cyan: #06b6d4;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-main);
+        color: #0f172a; /* Slate 900 */
+        overflow-x: hidden;
+      }
+      h1, h2, h3, h4, h5, h6, .font-lexend {
+        font-family: 'Lexend', sans-serif;
+        letter-spacing: -0.02em;
+      }
+      
+      /* 3D Elevated Slab Style */
+      .btn-3d {
+        position: relative;
+        transition: all 0.2s ease;
+        border-bottom-width: 4px;
+        border-color: rgba(0,0,0,0.2);
+      }
+      .btn-3d:hover {
+        transform: translateY(-2px);
+        border-bottom-width: 6px;
+      }
+      .btn-3d:active {
+        transform: translateY(2px);
+        border-bottom-width: 1px;
+      }
+
+      /* Pristine Glassmorphism (Light) */
+      .glass-slab {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 
+          0 10px 15px -3px rgba(0, 0, 0, 0.04),
+          0 4px 6px -4px rgba(0, 0, 0, 0.04),
+          inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      }
+
+      /* 3D Card Hover Effect */
+      .card-3d {
+        background: white;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+      }
+      .card-3d:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        border-color: rgba(79, 70, 229, 0.2);
+      }
+
+      /* Pastel Mesh Gradient */
+      .mesh-bg-light {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: #f8fafc;
+        background-image: 
+          radial-gradient(at 0% 0%, hsla(230,100%,95%,1) 0px, transparent 50%),
+          radial-gradient(at 100% 0%, hsla(190,100%,95%,1) 0px, transparent 50%),
+          radial-gradient(at 100% 100%, hsla(330,100%,98%,1) 0px, transparent 50%),
+          radial-gradient(at 0% 100%, hsla(260,100%,96%,1) 0px, transparent 50%);
+      }
+
+      .text-gradient-indigo {
+        background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div class="mesh-bg-light"></div>
+    <div id="root"></div>
+  </body>
+</html>
