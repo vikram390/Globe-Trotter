@@ -1,0 +1,2 @@
+# Globe-Trotter
+Odoo Hackathon
